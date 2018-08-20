@@ -31,7 +31,7 @@ Source: "Support Website.url"; DestDir: "{app}"
 [Run]
 Filename: "{app}\cygrunsrv.exe"; StatusMsg: "Stopping Cntlm service..."; Parameters: " --stop cntlm"
 Filename: "{app}\cygrunsrv.exe"; StatusMsg: "Removing Cntlm service..."; Parameters: " --remove cntlm"
-Filename: "{app}\cygrunsrv.exe"; StatusMsg: "Installing Cntlm service..."; Parameters: "--install cntlm -s KILL -t auto -p ""{app}\cntlm.exe"" -d ""Cntlm Authentication Proxy"" -f ""HTTP Accelerator"" -a -f"
+Filename: "{app}\cygrunsrv.exe"; StatusMsg: "Installing Cntlm service..."; Parameters: "--install cntlm -s KILL -t auto -p ""{app}\cntlm.exe"" -d ""Cntlm Authentication Proxy"" -f ""HTTP Accelerator"" -a ""-f -c '{app}\cntlm.ini'"""
 
 [Icons]
 Name: "{group}\cntlm.ini"; Filename: "{app}\cntlm.ini"
