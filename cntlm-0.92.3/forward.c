@@ -458,7 +458,7 @@ beginning:
 			if (debug)
 				hlist_dump(data[loop]->headers);
 
-			if (loop == 0 && data[0]->req)
+			if (loop == 0 && data[0]->req && debug)
 				syslog(LOG_DEBUG, "%s %s %s", inet_ntoa(caddr.sin_addr), data[0]->method, data[0]->url);
 
 shortcut:
